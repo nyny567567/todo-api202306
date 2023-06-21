@@ -1,6 +1,5 @@
 package com.example.todo.todoapi.entity;
 
-
 import lombok.*;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.GenericGenerator;
@@ -12,7 +11,6 @@ import java.time.LocalDateTime;
 @ToString @EqualsAndHashCode(of = "todoId")
 @NoArgsConstructor @AllArgsConstructor
 @Builder
-
 @Entity
 @Table(name = "tbl_todo")
 public class Todo {
@@ -25,8 +23,25 @@ public class Todo {
     @Column(nullable = false, length = 30)
     private String title; //제목
 
-    private boolean done; // 일정 완료 여부
+    private boolean done; //일정 완료 여부
 
     @CreationTimestamp
     private LocalDateTime createDate; //등록 시간
+
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
