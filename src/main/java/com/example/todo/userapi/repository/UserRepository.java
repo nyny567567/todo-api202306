@@ -1,7 +1,10 @@
 package com.example.todo.userapi.repository;
 
+import com.example.todo.userapi.entity.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
+
+import java.util.Optional;
 
 public interface UserRepository
     extends JpaRepository<User, String> {
@@ -12,7 +15,7 @@ public interface UserRepository
     Optional<User> findByEmail(String email);
 
     // 이메일 중복 체크
-    // @Query("SELECT COUNT(*) FROM User u WHERE u.email = ?1")
+    //@Query("SELECT COUNT(*) FROM User u WHERE u.email = ?1")
     boolean existsByEmail(String email);
 
 }

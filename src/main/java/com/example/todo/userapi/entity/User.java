@@ -34,5 +34,19 @@ public class User {
     @CreationTimestamp
     private LocalDateTime joinDate;
 
-
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
